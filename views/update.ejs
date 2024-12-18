@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-900 text-white">
+    <div class="flex justify-center items-center">
+      <h1 class="mt-16 mb-5 text-2xl absolute font-semibold">Update the  User</h1>
+      <hr class="bg-white h-1 w-1/2 rounded mt-32" />
+    </div>
+    <div class="justify-center items-center flex font-semibold">
+      <div
+        class="w-64 mt-20 border justify-center items-start flex p-5 rounded-md"
+      >
+        <form action="/update" method="post">
+          <label class="block mb-2" for="UserName">UserName</label>
+          <input
+            type="text"
+            name="UserName"
+            class="bg-zinc-700 rounded-[5px] px-1 py-1 outline-none"
+            placeholder="<%= user.UserName %>"
+          />
+          <label class="block mb-2 mt-2" for="Registration"
+            >Registration No</label
+          >
+          <input
+            type="text"
+            name="Registration"
+            class="bg-zinc-700 rounded-[5px] px-1 py-1 outline-none"
+            placeholder="<%= user.Registration %>"
+          />
+          <label class="block mb-2 mt-2" for="Course">Course</label>
+          <input
+            type="text"
+            name="Course"
+            class="bg-zinc-700 rounded-[5px] px-1 py-1 outline-none"
+            placeholder="<%= user.Course %>"
+          />
+          <label class="block mb-2 mt-2" for="Semester">Semester</label>
+          <input
+            type="text"
+            name="Semester"
+            class="bg-zinc-700 rounded-[5px] px-1 py-1 outline-none"
+            placeholder="<%= user.Semester %>"
+          />
+          <input
+            type="submit"
+            value="Update User"
+            class="mt-5 bg-blue-500 px-2 py-2 rounded-md justify-center items-center flex ml-12"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-900 text-white">
+    <main>
+      <% if (users.length > 0) { %>
+      <div class="p-5 flex flex-wrap gap-5 justify-start mt-5">
+        <% users.forEach(user => { %>
+        <div class="border-2 border-white w-44 h-[19rem] rounded-md p-2">
+          <div class="h-40 rounded-md p-1">
+            <img
+              class="h-full w-full object-cover rounded-sm"
+              src="/images/Untitled.png"
+              alt="User Image"
+            />
+          </div>
+          <div class="h-16 mt-1 p-[1px]">
+            <h5 class="text-sm tracking-[-0.02em] ml-2">
+              Name : <%= user.UserName %>
+            </h5>
+            <h6 class="text-sm tracking-[-0.02em] ml-2">
+              Registration : <%= user.Registration %>
+            </h6>
+            <h6 class="text-sm tracking-[-0.02em] ml-2">
+              Course : <%= user.Course %>
+            </h6>
+          </div>
+          <div class="p-1 flex gap-1">
+            <a
+              class="p-2 bg-blue-600 mt-5 tracking-tighter text-xs rounded-md text-white text-center"
+              href="/Update/<%= user._id %>"
+            >
+              Update
+            </a>
+            <a
+              class="p-2 bg-red-600 mt-5 tracking-tighter text-xs rounded-md text-white text-center"
+              href="/Delete/<%= user._id %>"
+            >
+              Delete
+            </a>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <% } else { %>
+      <p class="text-center mt-5 text-gray-400">No users found.</p>
+      <% } %>
+    </main>
+  </body>
+</html>
