@@ -11,7 +11,7 @@
       <% if (users.length > 0) { %>
       <div class="p-5 flex flex-wrap gap-5 justify-start mt-5">
         <% users.forEach(user => { %>
-        <div class="border-2 border-white w-44 h-[19rem] rounded-md p-2">
+        <div class="border-2 border-white w-44 h-[22rem] rounded-md p-2">
           <div class="h-40 rounded-md p-1">
             <img
               class="h-full w-full object-cover rounded-sm"
@@ -29,17 +29,20 @@
             <h6 class="text-sm tracking-[-0.02em] ml-2">
               Course : <%= user.Course %>
             </h6>
+            <h6 class="text-sm tracking-[-0.02em] ml-2">
+              Course : <%= user.Semester %>
+            </h6>
           </div>
           <div class="p-1 flex gap-1">
             <a
-              class="p-2 bg-blue-600 mt-5 tracking-tighter text-xs rounded-md text-white text-center"
-              href="/Update/<%= user._id %>"
+              class="p-2 bg-blue-600 mt-12 tracking-tighter text-xs rounded-md text-white text-center"
+              href="/update/<%= user._id %>"
             >
               Update
             </a>
             <a
-              class="p-2 bg-red-600 mt-5 tracking-tighter text-xs rounded-md text-white text-center"
-              href="/Delete/<%= user._id %>"
+              class="p-2 bg-red-600 mt-12 tracking-tighter text-xs rounded-md text-white text-center"
+              href="/delete/<%= user._id %>"
             >
               Delete
             </a>

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-mongoose.connect(process.env.DB_CONNECTION_STRING);
+mongoose.connect(process.env.DB_CONNECTION_STRING); // connectiing with mongodb
 
 // Define the schema
 const userSchema = mongoose.Schema({
